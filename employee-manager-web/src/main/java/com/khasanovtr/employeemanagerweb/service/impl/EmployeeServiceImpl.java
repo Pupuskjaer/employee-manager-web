@@ -18,7 +18,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     private List<Employee> employees = new ArrayList<>();
     @Override
     public Employee add(String firstName, String lastName) {
-        if (employees.size() > 02MAX_AMOUNT) {
+        if (employees.size() > MAX_AMOUNT) {
             throw new EmployeeStorageIsFullException("Вы достигли максимального количества сотрудников в списке");
         }
         Employee emp = new Employee(firstName, lastName);
